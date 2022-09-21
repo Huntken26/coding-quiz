@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    margin: 20px;
+
+}
+
+.top-left {
+    float: left;
+    color: rgb(245, 132, 245);
+}
+
+.timer {
+    float: right;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 100px;
+    text-align: center;
+
+
+}
+
+
+.title {
+    font-size: 200%;
+    font-weight: bolder;
+    margin-top: 150px;
+    padding: 10px;
+}
+
+.startup-instructions {
+    display: flex;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.start-button {
+    margin: auto;
+    margin-top: 30px;
+    display: block;
+    color: white;
+    background-color: rgb(65, 12, 65);
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 110%;
+    border-radius: 8px;
+}

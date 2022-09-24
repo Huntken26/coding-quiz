@@ -3,6 +3,7 @@
 // repeat this for each question
 // set arrays and if then statements, functions etc.
 // plan it all out during my study group
+// click event for timer/button and another event for wrong answerr
 
 
 var countdown = document.querySelector("timer");
@@ -16,11 +17,13 @@ var button = document.querySelector("start-button");
 
 
 
-
-
-
-
-
+// Listen for a click event on toggle switch
+// themeSwitcher.addEventListener("click", function() {
+//     // If mode is dark, apply light background
+//     if (mode === "dark") {
+//       mode = "light";
+//       container.setAttribute("class", "light");
+//     }
 
 // var secondsLeft = 10;
 
@@ -39,3 +42,17 @@ var button = document.querySelector("start-button");
 
 //   }, 1000);
 // }
+
+
+//  Function to create and append colorsplosion image
+// function sendMessage() {
+//     timeEl.textContent = " ";
+//     var imgEl = document.createElement("img");
+//     imgEl.setAttribute("src", "images/image_1.jpg");
+//     mainEl.appendChild(imgEl);
+  
+//   }
+  
+//   setTime();
+  
+  

@@ -10,12 +10,21 @@ var countdown = document.querySelector("timer");
 var mainSection = document.querySelector("wrapper");
 var mainTitle = document.querySelector("title");
 var instructions = document.querySelector("startup-instructions");
-var button = document.querySelector("start-button");
+var start = document.querySelector("start-button");
+var scores = document.querySelector("top-left");
 
 
 
 
 
+
+// Listen for a click event on toggle switch
+// themeSwitcher.addEventListener("click", function() {
+//     // If mode is dark, apply light background
+//     if (mode === "dark") {
+//       mode = "light";
+//       container.setAttribute("class", "light");
+//     }
 
 // Listen for a click event on toggle switch
 // themeSwitcher.addEventListener("click", function() {

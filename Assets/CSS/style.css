@@ -15,8 +15,9 @@ nav {
 
 .top-left {
     float: left;
-    color: rgb(245, 132, 245);
+    color: rgb(136, 21, 136);
     cursor: pointer;
+    background-color: lightgrey;
 }
 
 .timer {
@@ -43,15 +44,28 @@ nav {
     font-weight: lighter;
 }
 
-.start-button {
+button {
     margin: auto;
-    margin-top: 30px;
+    margin-top: 10px;
     display: block;
     color: white;
     background-color: rgb(65, 12, 65);
     text-align: center;
     cursor: pointer;
-    padding: 10px;
-    font-size: 110%;
+    padding: 5px;
+    font-size: 20px;
     border-radius: 8px;
 }
+
+
+.questions {
+    position: relative;
+    top: -200px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px;
+    margin-right: 250px;
+    text-align: center;
+    font-size: 180%;
+}
+

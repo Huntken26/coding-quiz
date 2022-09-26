@@ -15,8 +15,55 @@ var scores = document.querySelector("top-left");
 
 
 
+const questions = [
+    {
+        question: "Which of these data types is a string?",
+        optionA: 7,
+        optionB: "Seven",
+        optionC: true,
+        optionD: undefined,
+        correct: "optionB"
+    },
+
+    {
+        question: "Which of these is used for Front-End Development?",
+        optionA: "Ruby",
+        optionB: "Java",
+        optionC: "Javascript",
+        optionD: "Python",
+        correct: "optionC"
+    },
+
+    {
+        question: "What does HTML stand for ?",
+        optionA: "Hyper Bolic Time Chamber",
+        optionB: "High Transfer Meta Language",
+        optionC: "Hexa Mega Texas Loop",
+        optionD: "Hypertext Markup Language",
+        correct: "optionD"
+    },
+
+    {
+        question: "_____ is used for Styling Websites ?",
+        optionA: "C++",
+        optionB: "SQL",
+        optionC: "CSS",
+        optionD: "CZZ",
+        correct: "optionC"
+    },
+
+]
 
 
+start.addEventListener("click", function() {
+   
+    }
+
+    
+    
+scores.addEventListener("click", function() {
+   
+}
 
 // Listen for a click event on toggle switch
 // themeSwitcher.addEventListener("click", function() {
@@ -26,31 +73,23 @@ var scores = document.querySelector("top-left");
 //       container.setAttribute("class", "light");
 //     }
 
-// Listen for a click event on toggle switch
-// themeSwitcher.addEventListener("click", function() {
-//     // If mode is dark, apply light background
-//     if (mode === "dark") {
-//       mode = "light";
-//       container.setAttribute("class", "light");
-//     }
+var secondsLeft = 75;
 
-// var secondsLeft = 10;
+function setTime() {
+  // Sets interval in variable
+  var timerInterval = setInterval(function() {
+    secondsLeft--;
+    timeEl.textContent = " Timer:" + secondsLeft;
 
-// function setTime() {
-//   // Sets interval in variable
-//   var timerInterval = setInterval(function() {
-//     secondsLeft--;
-//     timeEl.textContent = secondsLeft + " seconds left till colorsplosion.";
+    if(secondsLeft === 0) {
+      // Stops execution of action at set interval
+      clearInterval(timerInterval);
+      // Calls function to create and append image
+      sendMessage();
+    }
 
-//     if(secondsLeft === 0) {
-//       // Stops execution of action at set interval
-//       clearInterval(timerInterval);
-//       // Calls function to create and append image
-//       sendMessage();
-//     }
-
-//   }, 1000);
-// }
+  }, 1000);
+}
 
 
 //  Function to create and append colorsplosion image

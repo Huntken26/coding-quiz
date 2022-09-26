@@ -5,17 +5,66 @@
 // plan it all out during my study group
 // click event for timer/button and another event for wrong answerr
 
+var body = document.body;
+var countdown = document.querySelector(".timer");
+var mainSection = document.querySelector(".wrapper");
+var mainTitle = document.querySelector(".title");
+var instructions = document.querySelector(".startup-instructions");
+var start = document.querySelector(".start-button");
+var highScores = document.querySelector(".top-left");
 
-var countdown = document.querySelector("timer");
-var mainSection = document.querySelector("wrapper");
-var mainTitle = document.querySelector("title");
-var instructions = document.querySelector("startup-instructions");
-var start = document.querySelector("start-button");
-var scores = document.querySelector("top-left");
+
+var question = document.createElement("div");
+var listEl  = document.createElement("ol");
+var li1 = document.createElement("li");
+var li2 = document.createElement("li");
+var li3 = document.createElement("li");
+var li4 = document.createElement("li");
+
+question.textContent = "";
+li1.textContent = "";
+li2.textContent = "";
+li3.textContent = " ";
+li4.textContent = "";
 
 
+mainSection.appendChild(question);
+question.appendChild(listEl);
+listEl.appendChild(li1);
+listEl.appendChild(li2);
+listEl.appendChild(li3);
+listEl.appendChild(li4);
 
-const questions = [
+
+start.onclick = function() {
+    mainTitle.style.visibility = "hidden";
+    instructions.style.visibility = "hidden";
+    start.style.visibility = "hidden";
+};
+
+
+function questionOne(questionsArray) {
+
+}
+
+function questionTwo(questionsArray) {
+    
+}
+
+function questionThree(questionsArray) {
+    
+}
+
+function questionFour(questionsArray) {
+    
+}
+
+function finalScore(questionsArray) {
+
+}
+
+
+var questionsArray = [
     {
         question: "Which of these data types is a string?",
         optionA: 7,
@@ -54,16 +103,13 @@ const questions = [
 
 ]
 
-
-start.addEventListener("click", function() {
-   
-    }
-
     
-    
-scores.addEventListener("click", function() {
-   
-}
+
+highScores.addEventListener("click", function() {
+
+})
+
+
 
 // Listen for a click event on toggle switch
 // themeSwitcher.addEventListener("click", function() {
@@ -73,34 +119,32 @@ scores.addEventListener("click", function() {
 //       container.setAttribute("class", "light");
 //     }
 
-var secondsLeft = 75;
+// var secondsLeft = 75;
 
-function setTime() {
-  // Sets interval in variable
-  var timerInterval = setInterval(function() {
-    secondsLeft--;
-    timeEl.textContent = " Timer:" + secondsLeft;
+// function setTime() {
+//   // Sets interval in variable
+//   var timerInterval = setInterval(function() {
+//     secondsLeft--;
+//     timeEl.textContent = " Timer:" + secondsLeft;
 
-    if(secondsLeft === 0) {
-      // Stops execution of action at set interval
-      clearInterval(timerInterval);
-      // Calls function to create and append image
-      sendMessage();
-    }
+//     if(secondsLeft === 0) {
+//       // Stops execution of action at set interval
+//       clearInterval(timerInterval);
+//       // Calls function to create and append image
+//       sendMessage();
+//     }
 
-  }, 1000);
-}
+//   }, 1000);
+// }
 
 
-//  Function to create and append colorsplosion image
 // function sendMessage() {
 //     timeEl.textContent = " ";
-//     var imgEl = document.createElement("img");
-//     imgEl.setAttribute("src", "images/image_1.jpg");
-//     mainEl.appendChild(imgEl);
   
 //   }
   
+
+
 //   setTime();
   
   

@@ -30,8 +30,22 @@ start.onclick = function () {
   listEl.appendChild(li2);
   listEl.appendChild(li3);
   listEl.appendChild(li4);
+  var sec = 75;
+  var time = setInterval(myTimer, 1000);
+
+  function myTimer() {
+    document.querySelector(".timer").innerHTML = sec + "sec left";
+    sec--;
+    if (sec == -1) {
+      clearInterval(time);
+      alert("Time out!! :(");
+    }
+  }
+
   return questionOne();
-}
+
+  return myTimer();
+};
 
 function questionOne() {
   question.textContent = "Which of these data types is a string?";
@@ -40,13 +54,14 @@ function questionOne() {
   listEl.appendChild(li2);
   listEl.appendChild(li3);
   listEl.appendChild(li4);
-  li1.textContent = 7;
+  li1.textContent = 12345;
   li2.textContent = " 'Seven' ";
-  li3.textContent = true;
+  li3.textContent = false;
   li4.textContent = "undefined";
-li2.onclick = function () {
+
+  li2.onclick = function () {
     return questionTwo();
-}
+  };
 }
 
 function questionTwo() {
@@ -60,9 +75,10 @@ function questionTwo() {
   li2.textContent = "Java";
   li3.textContent = "Javascript";
   li4.textContent = "Python";
+
   li3.onclick = function () {
     return questionThree();
-}
+  };
 }
 
 function questionThree() {
@@ -76,11 +92,11 @@ function questionThree() {
   li2.textContent = "High Transfer Meta Language";
   li3.textContent = "Hexa Mega Texas Loop";
   li4.textContent = "Hypertext Markup Language";
+
   li4.onclick = function () {
     return questionFour();
+  };
 }
-}
-
 
 function questionFour() {
   question.textContent = "_____ is used for Styling Websites ?";
@@ -96,12 +112,11 @@ function questionFour() {
 
   li3.onclick = function () {
     return finalScore();
-}
+  };
 }
 
 function finalScore() {
-    var score = document.createElement("div");
+  var score = document.createElement("div");
 
-    score = "";
+  score = "";
 }
-

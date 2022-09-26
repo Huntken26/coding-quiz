@@ -64,6 +64,12 @@ function questionOne() {
   };
 }
 
+// if (li2.clicked == true) {
+//   questionTwo;
+// } else if (li1.clicked || li3.clicked || li4.clicked) {
+//   alert("WRONG");
+// }
+
 function questionTwo() {
   question.textContent = "Which of these is used for Front-End Development?";
   question.appendChild(listEl);
@@ -117,6 +123,36 @@ function questionFour() {
 
 function finalScore() {
   var score = document.createElement("div");
-
-  score = "";
+  var winnerList = document.createElement("ol");
+  score.appendChild(winnerList);
+  const alphabet = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+  ];
+  var input = "";
+  winnerList.textContent = "HIGH SCORES" + input;
 }

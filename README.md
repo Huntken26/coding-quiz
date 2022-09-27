@@ -22,7 +22,11 @@ N/A
 
 ## Deployed Link
 
-##Repo Link
+https://huntken26.github.io/coding-quiz/
+
+## Repo Link
+
+https://github.com/Huntken26/coding-quiz
 
 ## screenshots
 

@@ -20,4 +20,10 @@ N/A
 
 N/A
 
+## Deployed Link
+
+##Repo Link
+
 ## screenshots
+
+![Screenshot (33)](https://user-images.githubusercontent.com/107738986/192423772-3503e413-5146-49dc-8a48-0a806b6ad552.png)

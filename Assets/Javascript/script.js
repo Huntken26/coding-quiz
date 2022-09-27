@@ -1,7 +1,4 @@
-// Set up my styling for the questions, answers, etc. Set up the timer, if then statements for each question and choice
-// set up if then statements for my choices being able to penalize someone for choosing wrong answer
-//set up final page created elements and also styling. High score page and elements
-// if anything other than correct answer is chosen alert wrong, is chosen right alert correct
+// NOTE FOR GRADER- I'm completely new to js and I'm still learning the more efficient ways to code
 
 var body = document.body;
 var countdown = document.querySelector(".timer");
@@ -19,6 +16,7 @@ var li3 = document.createElement("BUTTON");
 var li4 = document.createElement("BUTTON");
 var sec = 75;
 var time;
+var input;
 
 function myTimer() {
   document.querySelector(".timer").innerHTML = sec + "sec left";
@@ -46,11 +44,6 @@ start.onclick = function () {
   return questionOne() + myTimer();
 };
 
-// Make a named function and assign as a click listener on the rest that arent correct wrong1 wrong2 wrong3 wrong4, have them deduct time. deduct from sec
-// function wrongAnswer() {
-//   prompt("Wrong Answer");
-// }
-
 function questionOne() {
   question.textContent = "Which of these data types is a string?";
   question.appendChild(listEl);
@@ -64,16 +57,22 @@ function questionOne() {
   li4.textContent = "undefined";
   li1.onclick = function () {
     alert("Wrong Answer");
+    time = setInterval(myTimer, 1000);
+    sec = 65;
   };
   li3.onclick = function () {
     alert("Wrong Answer");
+    time = setInterval(myTimer, 1000);
+    sec = 65;
   };
   li4.onclick = function () {
     alert("Wrong Answer");
+    time = setInterval(myTimer, 1000);
+    sec = 65;
   };
 
   li2.onclick = function () {
-    return questionTwo();
+    return questionTwo() + myTimer();
   };
 }
 
@@ -90,16 +89,22 @@ function questionTwo() {
   li4.textContent = "Python";
   li1.onclick = function () {
     alert("Wrong Answer");
+    time = setInterval(myTimer, 1000);
+    sec = 55;
   };
   li2.onclick = function () {
     alert("Wrong Answer");
+    time = setInterval(myTimer, 1000);
+    sec = 55;
   };
   li4.onclick = function () {
     alert("Wrong Answer");
+    time = setInterval(myTimer, 1000);
+    sec = 55;
   };
 
   li3.onclick = function () {
-    return questionThree();
+    return questionThree() + myTimer();
   };
 }
 
@@ -116,16 +121,22 @@ function questionThree() {
   li4.textContent = "Hypertext Markup Language";
   li1.onclick = function () {
     alert("Wrong Answer");
+    time = setInterval(myTimer, 1000);
+    sec = 45;
   };
   li2.onclick = function () {
     alert("Wrong Answer");
+    time = setInterval(myTimer, 1000);
+    sec = 45;
   };
   li3.onclick = function () {
     alert("Wrong Answer");
+    time = setInterval(myTimer, 1000);
+    sec = 45;
   };
 
   li4.onclick = function () {
-    return questionFour();
+    return questionFour() + myTimer();
   };
 }
 
@@ -142,56 +153,23 @@ function questionFour() {
   li4.textContent = "CZZ";
   li1.onclick = function () {
     alert("Wrong Answer");
+    time = setInterval(myTimer, 1000);
+    sec = 35;
   };
   li2.onclick = function () {
     alert("Wrong Answer");
+    time = setInterval(myTimer, 1000);
+    sec = 35;
   };
   li4.onclick = function () {
     alert("Wrong Answer");
+    time = setInterval(myTimer, 1000);
+    sec = 35;
   };
 
   li3.onclick = function () {
-    return finalScore;
+    window.location.reload();
   };
 }
 
-//local storage json stringify and parse; have an input with a button. submit button will have a function to get the value and put in local stor
-function finalScore() {
-  var score = document.createElement("div");
-  var winners = document.createElement("ol");
-  var inputInitials = document.createElement("BUTTON");
-  winners.appendChild(inputInitials);
-  score.appendChild(winners);
-  inputInitials.textContent = "" + JSON.stringify(alphabet);
-  const alphabet = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-    "Z",
-  ];
-  var input = "";
-  winners.textContent = "HIGH SCORES" + input;
-  return winners;
-}
+// For resubmission- add javascript functions and variables for the high score form/ initials input.
